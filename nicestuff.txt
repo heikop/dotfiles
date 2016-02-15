@@ -1,0 +1,26 @@
+>>>>> >>>>> >>>>> HIBERNATING <<<<< <<<<< <<<<<
+
+source: https://help.ubuntu.com/stable/ubuntu-help/power-hibernate.html
+
+first try: sudo pm-hibernate
+if it works, copy following into
+/etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
+
+[Re-enable hibernate by default in upower]
+Identity=unix-user:*
+Action=org.freedesktop.upower.hibernate
+ResultActive=yes
+
+[Re-enable hibernate by default in logind]
+Identity=unix-user:*
+Action=org.freedesktop.login1.hibernate;org.freedesktop.login1.hibernate-multiple-sessions
+ResultActive=yes
+
+>>>>> >>>>> >>>>> GRUB TIMEOUT <<<<< <<<<< <<<<<
+
+source: http://askubuntu.com/questions/43020/decrease-grub-timeout
+and: https://help.ubuntu.com/community/Grub2/
+
+sudo vim /etc/default/grub
+change the line "GRUB_TIMEOUT=1" for one second timeout
+after saving run: sudo update-grub

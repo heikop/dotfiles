@@ -1,0 +1,6 @@
+alias clear2='clear; clear'
+
+alias icarus='ssh mpiu@129.217.165.216'
+#alias icarus='cd; mkdir icarusmount; #rm -rf icarusmount/*; sshfs mpiu@129.217.165.216: icarusmount/; cd icarusmount;'
+alias kashyyyk='ssh xhpoelst@129.217.151.183'
+#alias del='mv !* ~.trash'

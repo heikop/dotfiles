@@ -52,8 +52,18 @@ set t_Co=256
 " colorscheme
 colorscheme valloric
 
+" show tabs and trailing spaces
+set list!
+set listchars=tab:>-,trail:.,extends:>
+
+" for autocompletion in tpp's
+autocmd BufNewFile,BufReadPost *.tpp set filetype=cpp
+
+" set 4 lines to the cursor - when moving vertically using j/k
+set so=4
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" KEYMAPPINGS
+" VUNDLE PLUGIN SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""
@@ -69,14 +79,14 @@ let g:ycm_confirm_extra_conf = 0 " always loading (every) config file without as
 """""""""""""""""""""""""""""""""""
 
 set hidden " allows buffer to be hidden if modified
-nmap <Left> <Esc>:bp<CR>  " TODO: find a better solution
-nmap <Right> <Esc>:bn<CR> " C-h and C-l is not a good idea
+nnoremap <Left> <Esc>:bp<CR>  " TODO: find a better solution
+nnoremap <Right> <Esc>:bn<CR> " C-h and C-l is not a good idea
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='simple'
 
-"""""""""""""""""""""""""""""""""""
-" other stuff
-"""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" KEYMAPPINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " treat long lines as break lines
 map j gj
@@ -93,12 +103,16 @@ set pastetoggle=<F2>
 xnoremap < <gv
 xnoremap > >gv
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" INTERFACE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" fast text scrolling
+nmap <Space> <PageDown>
+" following line cannot have a comment after it...
+nmap <C-@> <PageUp>
+" vim understands <C-Space> as <C-@> o.O
+" nmap <C-Space> <PageUp> " does not work. maybe someday
 
-" set 4 lines to the cursor - when moving vertically using j/k
-set so=4
+" scrolling between command recently used
+cmap <C-j> <PageDown>
+cmap <C-k> <PageUp>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TABS & CO
