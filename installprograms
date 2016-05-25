@@ -1,26 +1,23 @@
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
-apt-get -y install 
+apt-get -y install audacity
+apt-get -y install blender
+apt-get -y install build-essential
+apt-get -y install cmake
+apt-get -y install easytag
+apt-get -y install geda
+apt-get -y install gem
+apt-get -y install gimp
+apt-get -y install git
+apt-get -y install htop
+apt-get -y install mariadb-server
+apt-get -y install nodejs
+apt-get -y install npm
+apt-get -y install octave
+apt-get -y install openscad
+apt-get -y install paraview
+apt-get -y install python3-pip
+apt-get -y install ruby
+apt-get -y install sloccount
+apt-get -y install sshfs
+apt-get -y install texmaker
+apt-get -y install thinlinc-client
+apt-get -y install vim
